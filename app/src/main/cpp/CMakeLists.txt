@@ -5,14 +5,15 @@ cmake_minimum_required(VERSION 3.18.1)
 project("ndkmd5")
 
 add_library(
-             ndkmd5
-             SHARED
-             native-lib.cpp )
+        ndkmd5
+        SHARED
+        native-lib.cpp
+        md5.cpp)
 
 find_library(
-              log-lib
-              log )
+        log-lib
+        log)
 
 target_link_libraries(
-                       ndkmd5
-                       ${log-lib} )
+        ndkmd5
+        ${log-lib})
